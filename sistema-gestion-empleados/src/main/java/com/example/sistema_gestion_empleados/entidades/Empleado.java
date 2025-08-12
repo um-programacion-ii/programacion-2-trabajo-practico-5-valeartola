@@ -1,4 +1,4 @@
-package entidades;
+package com.example.sistema_gestion_empleados.entidades;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Entity
@@ -35,6 +37,18 @@ public class Empleado {
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal salario;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "departamento_id")
+    private Departamento departamento;
+
+    @ManyToMany
+    @JoinTable(
+            name = "empleado_proyecto",
+            joinColumns = @JoinColumn(name = "empleado_id"),
+            inverseJoinColumns = @JoinColumn(name = "proyecto_id")
+    )
+    private Set<Proyecto> proyectos = new HashSet<>();
 
 }
 

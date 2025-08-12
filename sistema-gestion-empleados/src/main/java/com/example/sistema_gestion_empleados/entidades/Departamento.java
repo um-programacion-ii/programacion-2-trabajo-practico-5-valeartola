@@ -1,9 +1,12 @@
-package entidades;
+package com.example.sistema_gestion_empleados.entidades;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
@@ -21,5 +24,8 @@ public class Departamento {
 
     @Column(length = 500)
     private String descripcion;
+
+    @OneToMany(mappedBy = "departamento", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Empleado> empleados = new ArrayList<>();
 
 }
