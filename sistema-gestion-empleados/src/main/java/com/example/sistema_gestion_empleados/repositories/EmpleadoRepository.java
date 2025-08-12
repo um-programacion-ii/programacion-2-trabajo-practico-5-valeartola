@@ -1,7 +1,7 @@
 package com.example.sistema_gestion_empleados.repositories;
 
-import com.example.sistema_gestion_empleados.entidades.Departamento;
-import com.example.sistema_gestion_empleados.entidades.Empleado;
+import com.example.sistema_gestion_empleados.models.Departamento;
+import com.example.sistema_gestion_empleados.models.Empleado;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
