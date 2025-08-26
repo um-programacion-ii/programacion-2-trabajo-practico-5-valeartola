@@ -11,7 +11,7 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    // Manejador para entidades no encontradas 
+    // Manejador para entidades no encontradas
     @ExceptionHandler({EmpleadoNoEncontradoException.class,
             DepartamentoNoEncontradoException.class,
             ProyectoNoEncontradoException.class})
