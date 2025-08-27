@@ -4,10 +4,14 @@ import com.example.sistema_gestion_empleados.exceptions.EmpleadoNoEncontradoExce
 import com.example.sistema_gestion_empleados.exceptions.ProyectoNoEncontradoException;
 import com.example.sistema_gestion_empleados.models.Proyecto;
 import com.example.sistema_gestion_empleados.repositories.ProyectoRepository;
+import jakarta.transaction.Transactional;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
 
+@Service
+@Transactional
 public class ProyectoServiceImpl implements ProyectoService {
     private ProyectoRepository proyectoRepository;
 
