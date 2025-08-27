@@ -1,3 +1,7 @@
+import com.example.sistema_gestion_empleados.exceptions.DepartamentoNoEncontradoException;
+import com.example.sistema_gestion_empleados.exceptions.EmailDuplicadoException;
+import com.example.sistema_gestion_empleados.exceptions.EmpleadoNoEncontradoException;
+import com.example.sistema_gestion_empleados.exceptions.ProyectoNoEncontradoException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

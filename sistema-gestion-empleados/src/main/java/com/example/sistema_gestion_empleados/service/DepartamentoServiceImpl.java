@@ -5,9 +5,13 @@ import com.example.sistema_gestion_empleados.exceptions.EmpleadoNoEncontradoExce
 import com.example.sistema_gestion_empleados.models.Departamento;
 import com.example.sistema_gestion_empleados.models.Empleado;
 import com.example.sistema_gestion_empleados.repositories.DepartamentoRepository;
+import jakarta.transaction.Transactional;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@Transactional
 public class DepartamentoServiceImpl implements DepartamentoService {
     private final DepartamentoRepository departamentoRepository;
     public DepartamentoServiceImpl(DepartamentoRepository departamentoRepository) {
