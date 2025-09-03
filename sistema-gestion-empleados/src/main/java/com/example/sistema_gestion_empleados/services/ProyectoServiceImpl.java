@@ -1,6 +1,5 @@
-package com.example.sistema_gestion_empleados.service;
+package com.example.sistema_gestion_empleados.services;
 
-import com.example.sistema_gestion_empleados.exceptions.EmpleadoNoEncontradoException;
 import com.example.sistema_gestion_empleados.exceptions.ProyectoNoEncontradoException;
 import com.example.sistema_gestion_empleados.models.Proyecto;
 import com.example.sistema_gestion_empleados.repositories.ProyectoRepository;
