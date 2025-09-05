@@ -191,6 +191,6 @@ public class ProyectoServiceIntegrationTest {
         assertThrows(ProyectoNoEncontradoException.class, () -> {
             proyectoService.eliminar(idInexistente);
         });
-        
+
     }
 }
