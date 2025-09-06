@@ -1,7 +1,7 @@
 package com.example.sistema_gestion_empleados.controllers;
 
 import com.example.sistema_gestion_empleados.models.Proyecto;
-import com.example.sistema_gestion_empleados.service.ProyectoService;
+import com.example.sistema_gestion_empleados.services.ProyectoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;

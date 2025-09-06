@@ -1,4 +1,4 @@
-package com.example.sistema_gestion_empleados.service;
+package com.example.sistema_gestion_empleados.services;
 
 import com.example.sistema_gestion_empleados.exceptions.EmailDuplicadoException;
 import com.example.sistema_gestion_empleados.exceptions.EmpleadoNoEncontradoException;
