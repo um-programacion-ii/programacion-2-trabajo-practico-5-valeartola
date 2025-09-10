@@ -45,13 +45,15 @@ public class GlobalExceptionHandler {
     // Manejador para cualquier otra excepción
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Object> handleGeneralException(Exception ex, WebRequest request) {
+
+        ex.printStackTrace(); // <--- ¡AGREGÁ ESTA LÍNEA AQUÍ!
+
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("timestamp", LocalDateTime.now());
         body.put("status", HttpStatus.INTERNAL_SERVER_ERROR.value());
         body.put("error", "Error Interno del Servidor");
         body.put("message", "Ocurrió un error inesperado. Contacte al administrador.");
         body.put("path", request.getDescription(false).replace("uri=", ""));
-
 
         return new ResponseEntity<>(body, HttpStatus.INTERNAL_SERVER_ERROR);
     }
