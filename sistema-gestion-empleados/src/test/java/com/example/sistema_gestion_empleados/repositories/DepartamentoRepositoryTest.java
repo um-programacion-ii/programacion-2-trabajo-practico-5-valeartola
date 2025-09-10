@@ -29,6 +29,6 @@ class DepartamentoRepositoryTest {
 
         assertTrue(resultado.isPresent());
         assertEquals("IT", resultado.get().getNombre());
-        
+
     }
 }
